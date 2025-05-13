@@ -36,9 +36,11 @@ Este site promove o evento **"Jazz & Blues Guaramiranga"**. A estrutura inclui i
 |-------------------------------|----------------------|  
 | João Luis Gomes Torres        | - |  
 | Antonio Ray Martins Vieira    | - |  
-| Augusto Sartri                | - |  
+| Igor Regis Nogueira           | - |  
 | Nicolas de Oliveira Duarte    | - |  
 | Emanuel Victor Holanda Mendes | - |  
+
+
 
 ---
 
