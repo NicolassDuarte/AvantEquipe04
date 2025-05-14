@@ -1,3 +1,30 @@
+/* Adição de estilos para o carrossel */
+.carousel {
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    height: 400px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+/* Estilos existentes */
 * {
     margin: 0;
 }
@@ -15,7 +42,7 @@
     border: transparent;
     height: 55px;
     background-color: #424042;
-    color: var(--color-background)
+    color: var(--color-background);
 }
 
 body {
@@ -31,6 +58,10 @@ a {
 }
 
 img {
+    position: relative; /* Modificado de absolute para relative para não afetar todas as imagens */
+}
+
+.navigation-container img {
     position: absolute;
     top: 0px;
     left: 10px;
@@ -148,8 +179,6 @@ main {
     padding: 0;
     overflow: hidden;
     box-sizing: border-box;
-
-
 }
 
 /* Cabeçalho */
@@ -185,11 +214,48 @@ main {
     padding-top: 10px;
     color: #333;
 }
+.attractionSection {
+    background-color: var(--color-secund-selector);
+    padding: 6rem;
+}
+.attractionSection p {
+    font-size: 0.6em;
+}
+.attractionSection img {
+    border-radius: 20px;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Altera a cor de fundo dos ícones */
+    border-radius: 70%; /* Deixa os ícones circulares */
+    width: 30px; /* Ajusta o tamanho dos ícones */
+    height: 30px;
+}
+
+.carousel-item p {
+    font-size: 0.4em;
+}
+.carousel-item h2 {
+    font-weight: 900;
+    font-size: 24px;
+}
+
 
 /* Responsivo */
 @media (max-width: 960px) {
     .event-card {
         width: 45%;
+    }
+    .carousel-inner img {
+        width: 100%;
+        height: 100%;
+    }
+    .carousel-item p {
+        font-size: 0.1rem;
+        text-align: justify;
+    }
+    .carousel-item h2 {
+        font-weight: 900;
+        font-size: 10px;
     }
 }
 
