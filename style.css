@@ -36,6 +36,9 @@
     --color-selector: #eedbb7;
     --color-secund-selector: #fff2d9;
     --color-hover: #575757;
+    --color-about-event: #FFE5C3;
+    --color-text-about-event: #252A62;
+    --color-white: #fff;
 }
 
 .navigation-container {
@@ -58,7 +61,8 @@ a {
 }
 
 img {
-    position: relative; /* Modificado de absolute para relative para não afetar todas as imagens */
+    position: relative;
+    /* Modificado de absolute para relative para não afetar todas as imagens */
 }
 
 .navigation-container img {
@@ -95,64 +99,25 @@ main {
 }
 
 /* Estilização da Seção sobre o Evento */
+/* Cards para Data e Local */
 .about-event {
-    font-size: 1rem !important;
-    padding: 20px;
-    max-width: 100%;
-    margin: 0 auto;
-    box-sizing: border-box;
-    background-color: #252A62;
-    /* roxo claro */
+    background-color: var(--color-about-event);
+    font-size: 1rem;
 }
 
 .event-intro {
-    text-align: center;
-    color: #fff;
-    margin-bottom: 40px;
+    color: var(--color-text-about-event);
 }
 
-.event-intro h2 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 15px;
-}
-
-.event-intro .event-description {
-    font-size: 1.1rem;
-    margin: 0 auto 30px auto;
+.event-description {
     max-width: 700px;
     line-height: 1.6;
+    font-size: 1.1rem;
 }
 
-.event-intro h3 {
-    font-size: 1.4rem;
-    margin-bottom: 20px;
-}
-
-/* Cards para Data e Local */
-.event-intro dl {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 0;
-    padding: 0;
-}
-
-.event-intro dt,
-.event-intro dd {
-    margin: 0;
-    padding: 0;
-}
-
-.event-intro dt {
-    display: none;
-    /* Oculta os termos, usamos só os valores */
-}
-
-.event-intro dd {
-    background: #fff;
-    color: #252A62;
+.event-date-box {
+    background: var(--color-white);
+    color: var(--color-text-about-event);
     font-weight: 600;
     padding: 15px 25px;
     border-radius: 8px;
@@ -162,78 +127,84 @@ main {
     text-align: center;
 }
 
-.event-info {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    /* centraliza os cards */
+.legal-info {
+    color: #333;
 }
 
 .event-card {
-    background-color: #fff;
+    background-color: var(--color-white);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    width: 300px;
-    /* largura menor e fixa */
+    width: 350px;
     padding: 0;
     overflow: hidden;
     box-sizing: border-box;
 }
 
-/* Cabeçalho */
-.event-card h3 {
-    background-color: #ffeb3b;
-    margin: 0;
-    padding: 12px;
-    font-size: 1.1rem;
+.event-title {
+    position: relative;
     text-align: center;
+    font-size: 1.25rem;
 }
 
-/* Conteúdo interno */
-.event-card ul,
-.event-card p {
+.fixed-icon {
+    position: absolute;
+    left: 15px;
+    /* distância do canto esquerdo da tela */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.25rem;
+}
+
+.title-text {
+    display: inline-block;
+}
+
+.event-card ul {
     padding: 15px;
     margin: 0;
-    list-style: disc;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* para alinhar à esquerda */
-    justify-content: center;
-    gap: 6px;
+    list-style: disc inside;
 }
 
 .event-card li {
     text-align: left;
 }
 
-.legal-info {
-    font-size: 0.9rem;
-    font-style: italic;
-    padding-top: 10px;
-    color: #333;
+/* Responsivo */
+@media (max-width: 600px) {
+    .event-card {
+        width: 100%;
+    }
 }
+
 .attractionSection {
     background-color: var(--color-secund-selector);
     padding: 6rem;
 }
+
 .attractionSection p {
     font-size: 0.6em;
 }
+
 .attractionSection img {
     border-radius: 20px;
 }
-.carousel-control-prev-icon, .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Altera a cor de fundo dos ícones */
-    border-radius: 70%; /* Deixa os ícones circulares */
-    width: 30px; /* Ajusta o tamanho dos ícones */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Altera a cor de fundo dos ícones */
+    border-radius: 70%;
+    /* Deixa os ícones circulares */
+    width: 30px;
+    /* Ajusta o tamanho dos ícones */
     height: 30px;
 }
 
 .carousel-item p {
     font-size: 0.4em;
 }
+
 .carousel-item h2 {
     font-weight: 900;
     font-size: 24px;
@@ -245,14 +216,17 @@ main {
     .event-card {
         width: 45%;
     }
+
     .carousel-inner img {
         width: 100%;
         height: 100%;
     }
+
     .carousel-item p {
         font-size: 0.1rem;
         text-align: justify;
     }
+
     .carousel-item h2 {
         font-weight: 900;
         font-size: 10px;
